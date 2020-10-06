@@ -1,0 +1,101 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width" />
+    <title>UserInput</title>
+
+    <script>
+        function makeVisible()
+        {
+            let first = document.getElementById("FirstName");
+            let last = document.getElementById("LastName");
+            let email = document.getElementById("Email");
+            let password = document.getElementById("Password");
+            let verifyPassword = document.getElementById("VerifyPassword");
+
+            var re = /\S+\S+\.\S+/;
+            var validPassword = (/^(?=.*[0-9])(?=.*[!#$%^&*])[a-zA-Z0-9!#$%^&*]{6,16}$/);
+
+
+            if (first.value.length < 2) {
+                document.getElementById("invalidFName").style.visibility = "visible";
+                return false;
+            }
+
+            else if (last.value.length < 2) {
+                document.getElementById("invalidLName").style.visibility = "visible";
+                return false;
+            }
+
+            else if (!re.test(email.value)) {
+                document.getElementById("invalidEmail").style.visibility = "visible";
+                return false;
+            }
+
+            else if (password.value != verifyPassword.value)
+            {
+                document.getElementById("mismatchPassword").style.visibility = "visible";
+                return false;
+            }
+
+            else if (!validPassword.test(password.value) || !validPassword.test(verifyPassword.value))
+            {
+                document.getElementById("invalidPassword").style.visibility = "visible";
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+
+    <form onsubmit="return makeVisible()" action="/home/confirmationPage">
+
+        First Name:
+        <input type="text" name="FirstName" id="FirstName" />
+        <div id="invalidFName" style="visibility: hidden">Name must be longer than 2 characters</div>
+        <br />
+
+        Last Name:
+        <input type="text" name="LastName" id="LastName" />
+        <div id="invalidLName" style="visibility: hidden">Name must be longer than 2 characters</div>
+        <br />
+
+        Email:
+        <input type="email" name="Email" id="Email" />
+        <div id="invalidEmail" style="visibility: hidden">Email must be in X@X.X format</div>
+        <br />
+
+        Password:
+        <input type="password" name="Password" id="Password" />
+        <div id="invalidPassword" style="visibility: hidden">Password does not meet requirements</div>
+        <br />
+
+        Verify Password:
+        <input type="password" name="VerifyPassword" id="VerifyPassword" />
+        <div id="mismatchPassword" style="visibility: hidden">Passwords do not match</div>
+        <div id="invalidPassword" style="visibility: hidden">Password does not meet requirements</div>
+
+        <br />
+
+        <input type="submit" />
+
+    </form>
+
+</body>
+
+</html>

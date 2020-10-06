@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lab16.1_ClientSideValidation", "lab16.1_ClientSideValidation\lab16.1_ClientSideValidation.csproj", "{B220C1AD-7571-47B9-8BCA-CD1D6717C937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B220C1AD-7571-47B9-8BCA-CD1D6717C937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B220C1AD-7571-47B9-8BCA-CD1D6717C937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B220C1AD-7571-47B9-8BCA-CD1D6717C937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B220C1AD-7571-47B9-8BCA-CD1D6717C937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4BAB74C-3416-44D7-A602-33BBB8DAAC4B}
+	EndGlobalSection
+EndGlobal
